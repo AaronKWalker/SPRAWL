@@ -21,6 +21,11 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 
 app.set("view engine", "handlebars");
 
+//routing
+app.get("/", function(req, res){
+    res.render("home")
+});
+
 
 app.listen(port, function(){
     console.log(`App listening on PORT: ${port}`)

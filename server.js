@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var path = require("path");
+var Handlebars = require("handlebars");
 
 var app = express();
 var port = process.env.PORT || 8080;
@@ -19,6 +20,7 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 
 app.set("view engine", "handlebars");
+
 
 app.listen(port, function(){
     console.log(`App listening on PORT: ${port}`)

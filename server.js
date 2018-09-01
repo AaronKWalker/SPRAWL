@@ -23,6 +23,7 @@ app.set("view engine", "handlebars");
 
 //routing
 app.get("/", function(req, res){
+    //function to pull saved games from local memory
     res.render("home")
 });
 
